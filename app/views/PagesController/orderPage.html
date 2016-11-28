@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="1IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Online pharmacy</title>
+	    <link rel="icon" href="/public/images/ico.png">
+	    <link rel="stylesheet" href="/public/stylesheets/main.css">
+	</head>    
+	<body>
+	
+	<img src = "/public/images/header.jpg" /> 
+	
+	#{if done2}
+		<center>
+		<h1> Thank you for shopping!</h1>
+		<a href="@{cancel}"> Return to the main page</a>
+		</center>
+	#{/if}
+	#{else}
+	<form action="@{PagesController.order}" method="POST" accept-charset="UTF-8">
+		<h1> Shopping Cart </h1>
+		
+		<div class = "regForm">
+		<input class = "regForm1" name = "firstName"   placeholder="First name"/> <br/>
+		<input class = "regForm1" name = "secondName"  placeholder="Second name"/><br/>
+		<input class = "regForm1" name = "email"       placeholder="email"> </input> <br/>
+		<input class = "regForm1" name = "phoneNumber" placeholder="Phone number"></input> <br/>
+		<input class = "regForm1" name = "address"     placeholder="Address"> </input> <br/>
+		</div>
+	<table>
+	<tr>
+		<th> # </th>
+		<th> Medicine </th>
+		<th> Quantity </th>
+	</tr>
+	#{list items:orders2, as: 'order'}
+	<tr>
+		<td> ${order_index} </td>
+		<td> ${order.getMed().getNameMedicine()} </td>
+		<td> ${order.getQty()} </td>
+	</tr>
+	#{/list}
+	<tr>
+		<td> </td>
+		<td> Total:  </td>
+		<td style = "color: red" > &#36; ${sum2} </td>
+	</tr>
+	</table>
+
+	
+		<input type="submit" value="Order"></input>
+		<a href="@{cancel}"> Cancel</a>
+	</form>
+	#{/else}
+
+
+
+	</div>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title> Online Pharmacy</title>
+	    <link rel="icon" href="/public/images/ico.png">
+	    <link rel="stylesheet" href="/public/stylesheets/main.css">
+	</head>    
+	<body>
+	
+	<img src = "/public/images/header.jpg" /> 
+
+	<h1> Online Pharmacy </h1>
+
+	#{list items:medicines, as:'medicine'}
+         <div class = "block">
+            <img class = "item" src = "/public/images/${medicine.getIdMedicine()}.jpg" /> 
+            <h3 class = "name"> ${medicine.getNameMedicine()}</h3>
+            <h3 class = "cost"> &#36;${medicine.getCost()} </h3>
+
+        
+        	<form action="@{Application.buy}" method="POST" accept-charset="UTF-8">
+        		<input name = "id" value = ${medicine.getIdMedicine()} hidden = "true"> </input>
+        		<input  class = "button" value = "Add to cart" type = "submit"> </input>
+        		<h2 class = "quantityMax"> Max: ${medicine.getCount()}</h2>
+          		<h2 class = "quantityText">Qty</h2>
+          		<input class = "quantity" name = "qty" value = 1> </input>
+          	</form>
+            
+        
+          </div>
+	#{/list}
+
+	#{if error1}
+	<script>;
+		alert("Invalid quantity!");
+	</script>
+	#{/if}
+	
+	#{if error2}
+	<script>;
+		alert("Sorry, the amount of medicines is limited!");
+	</script>
+	#{/if}
+
+
+	
+	#{list items:orders2, as: 'order'}
+	<div>
+		<h2 style = "font-size: 20px" ><b>${order.getMed().getNameMedicine()}</b> x ${order.getQty()}</h2>
+	</div>
+	#{/list}
+
+	
+	<form action = @{Application.checkOut} method="POST" accept-charset="UTF-8">
+		<input class = "button" type="submit" Value="Check out"> </input>
+		<h2 class = "cost"> Total: &#36; ${a}</h2>
+	</form>
+
+	<form action = @{cancel} method="POST" accept-charset="UTF-8">
+		<input class = "cancel" type="submit" Value="X"> </input>
+		
+	</form>
+
+<!--      
+	<div><a href="/upload">Upload your own photo</a></div>
+	<div><a href="/logout">Logout</a></div>
+-->
+	</body>
+</html>

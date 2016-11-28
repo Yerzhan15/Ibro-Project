@@ -1,0 +1,15 @@
+Listening for transport dt_socket at address: 8000
+20:08:04,110 INFO  ~ Starting C:\Users\Ибрахим\Desktop\apps\Database\Pharmacy
+20:08:04,889 WARN  ~ You're running Play! in DEV mode
+20:08:05,099 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+~ Server is up and running
+20:08:05,760 ERROR ~ Restart: Need to restart Play because C:\Users\Ибрахим\Desktop\apps\Database\Pharmacy\conf\application.conf has been changed
+java.lang.RuntimeException: Need to restart Play because C:\Users\Ибрахим\Desktop\apps\Database\Pharmacy\conf\application.conf has been changed
+	at play.ConfigurationChangeWatcherPlugin.onConfigurationFileChanged(ConfigurationChangeWatcherPlugin.java:30)
+	at play.ConfigurationChangeWatcherPlugin.detectChange(ConfigurationChangeWatcherPlugin.java:24)
+	at play.plugins.PluginCollection.detectChange(PluginCollection.java:598)
+	at play.Play.detectChanges(Play.java:641)
+	at play.Invoker$Invocation.init(Invoker.java:199)
+	at Invocation.HTTP Request(Play!)
+20:08:06,419 INFO  ~ Application 'catwork' is now started !
+20:08:06,461 INFO  ~ HEllo!

@@ -1,0 +1,171 @@
+* { 
+  font-family: Arial, Helvetica, sans-serif; 
+}
+h1 {
+  color: #369; 
+  font-family: Arial, Helvetica, sans-serif;   
+  font-size: 250%;
+}
+h2, h3 { 
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;   
+  font-weight: lighter;
+}
+body { 
+  margin: 1em; 
+}
+body, input[text], button { 
+  color: #888; 
+  font-family: Cambria, Georgia; 
+}
+a {
+  cursor: pointer;
+  cursor: hand;
+}
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa; 
+  cursor: auto;
+}
+table {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;   
+  font-size: 25px;
+}
+td {
+  padding: 10px;
+}
+.regForm {
+  font-size: 20px;
+  margin: 50px;
+}
+
+.regForm1 {
+  font-size: 20px;
+}
+
+.name {
+  color: #369; 
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 50px;
+}
+.cost {
+  color: #ff0000;
+  font-size: 27px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 50px;
+  right: 0px;
+}
+.quantity {
+  width: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+}
+.quantityText {
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 13px;
+  right: 56px;
+}
+.quantityMax {
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 13px;
+  right: 120px;
+}
+.cancel {
+  width: 30px;
+  font-size:20px;
+  padding: 8px;
+  border: 1px solid #607D8B; 
+  background-color: #ff0000;
+  color: black;
+  position:absolute;  
+  bottom: 20px;
+  right: 0px;
+}
+
+
+
+
+.form {
+	width: 50%;
+	margin: 30px auto;
+}
+.paw {
+	width: 150px;
+	margin: 10px auto;
+}
+
+input {
+    
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+a {
+	width: 50%;
+	margin: 10px 100px;
+}
+
+.error-message {
+	width: 70%;
+	margin: 10px 100px;;
+}
+.header {
+          margin: 0px
+        }
+        .button {
+          width: 130px;
+          font-size:20px;
+          border: 1px solid #607D8B; 
+          background-color: #00cc66;
+          color: black;
+          position:absolute;  
+
+          bottom: 20px;
+        }
+        .button:hover {
+          border: 1px solid #000000;
+
+        }
+        .block {
+            margin-right: 150px;
+            float: left;
+            width: 350px;
+            height: 400px;
+            position: relative;
+        }
+        .item {  
+          position: absolute;
+          top: 50px;
+          border: 1px solid #ccc;
+          width: 350px;
+          height: auto;
+        }
+        .item:hover {
+          
+        }
+
+
